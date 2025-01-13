@@ -1,120 +1,120 @@
 # Televisor
-using System;
-
-public class Televisor
-{
+public class Televisor {
     // Propiedades públicas
-    public string Marca 
-    public string Modelo 
-    public int TamañoPulgadas 
-    public bool EsSmartTV 
-    public float Precio 
+    public String marca;
+    public String modelo;
+    public int tamañoPulgadas;
+    public boolean esSmartTV;
+    public float precio;
 
     // Campos privados
-    private string resolucion;
-    private string tipoPantalla;
+    private String resolucion;
+    private String tipoPantalla;
     private int puertosHDMI;
-    private bool tieneUSB;
-    private string sistemaOperativo;
+    private boolean tieneUSB;
+    private String sistemaOperativo;
 
     // Getters y Setters para los atributos privados
-    public string Resolucion
-    {
-        get { return resolucion; }
-        set { resolucion = value; }
+    public String getResolucion() {
+        return resolucion;
     }
 
-    public string TipoPantalla
-    {
-        get { return tipoPantalla; }
-        set { tipoPantalla = value; }
+    public void setResolucion(String resolucion) {
+        this.resolucion = resolucion;
     }
 
-    public int PuertosHDMI
-    {
-        get { return puertosHDMI; }
-        set { puertosHDMI = value; }
+    public String getTipoPantalla() {
+        return tipoPantalla;
     }
 
-    public bool TieneUSB
-    {
-        get { return tieneUSB; }
-        set { tieneUSB = value; }
+    public void setTipoPantalla(String tipoPantalla) {
+        this.tipoPantalla = tipoPantalla;
     }
 
-    public string SistemaOperativo
-    {
-        get { return sistemaOperativo; }
-        set { sistemaOperativo = value; }
+    public int getPuertosHDMI() {
+        return puertosHDMI;
+    }
+
+    public void setPuertosHDMI(int puertosHDMI) {
+        this.puertosHDMI = puertosHDMI;
+    }
+
+    public boolean isTieneUSB() {
+        return tieneUSB;
+    }
+
+    public void setTieneUSB(boolean tieneUSB) {
+        this.tieneUSB = tieneUSB;
+    }
+
+    public String getSistemaOperativo() {
+        return sistemaOperativo;
+    }
+
+    public void setSistemaOperativo(String sistemaOperativo) {
+        this.sistemaOperativo = sistemaOperativo;
     }
 
     // Constructor sin parámetros
-    public Televisor()
-    {
-        Marca = "";
-        Modelo = "";
-        TamañoPulgadas = 0;
-        EsSmartTV = false;
-        Precio = 0.0m;
+    public Televisor() {
+        this.marca = "";
+        this.modelo = "";
+        this.tamañoPulgadas = 0;
+        this.esSmartTV = false;
+        this.precio = 0.0f;
 
-        resolucion = "";
-        tipoPantalla = "";
-        puertosHDMI = 0;
-        tieneUSB = false;
-        sistemaOperativo = "";
+        this.resolucion = "";
+        this.tipoPantalla = "";
+        this.puertosHDMI = 0;
+        this.tieneUSB = false;
+        this.sistemaOperativo = "";
     }
 
     // Constructor con parámetros públicos
-    public Televisor(string marca, string modelo, int tamañoPulgadas, bool esSmartTV, decimal precio)
-    {
-        Marca = marca;
-        Modelo = modelo;
-        TamañoPulgadas = tamañoPulgadas;
-        EsSmartTV = esSmartTV;
-        Precio = precio;
+    public Televisor(String marca, String modelo, int tamañoPulgadas, boolean esSmartTV, float precio) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.tamañoPulgadas = tamañoPulgadas;
+        this.esSmartTV = esSmartTV;
+        this.precio = precio;
 
-        resolucion = "";
-        tipoPantalla = "";
-        puertosHDMI = 0;
-        tieneUSB = false;
-        sistemaOperativo = "";
+        this.resolucion = "";
+        this.tipoPantalla = "";
+        this.puertosHDMI = 0;
+        this.tieneUSB = false;
+        this.sistemaOperativo = "";
     }
 
     // Constructor con todos los parámetros
-    public Televisor(string marca, string modelo, int tamañoPulgadas, bool esSmartTV, decimal precio,
-                     string resolucion, string tipoPantalla, int puertosHDMI, bool tieneUSB, string sistemaOperativo)
-    {
-        Marca = marca;
-        Modelo = modelo;
-        TamañoPulgadas = tamañoPulgadas;
-        EsSmartTV = esSmartTV;
-        Precio = precio;
+    public Televisor(String marca, String modelo, int tamañoPulgadas, boolean esSmartTV, float precio,
+                     String resolucion, String tipoPantalla, int puertosHDMI, boolean tieneUSB, String sistemaOperativo) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.tamañoPulgadas = tamañoPulgadas;
+        this.esSmartTV = esSmartTV;
+        this.precio = precio;
 
-        resolucion = resolucion;
-        tipoPantalla = tipoPantalla;
-        puertosHDMI = puertosHDMI;
-        tieneUSB = tieneUSB;
-        sistemaOperativo = sistemaOperativo;
+        this.resolucion = resolucion;
+        this.tipoPantalla = tipoPantalla;
+        this.puertosHDMI = puertosHDMI;
+        this.tieneUSB = tieneUSB;
+        this.sistemaOperativo = sistemaOperativo;
     }
 
 }
 
-
-class Program
-{
-    static void Main()
-    {
-   
+class Main {
+    public static void main(String[] args) {
         Televisor televisor1 = new Televisor();
-        televisor1.MostrarInformacion();
+        televisor1.mostrarInformacion();
 
-        Televisor televisor2 = new Televisor("Samsung", "QLED Q80A", 55, true, 999.99m);
-        televisor2.MostrarInformacion();
+        Televisor televisor2 = new Televisor("Samsung", "QLED Q80A", 55, true, 999.99f);
+        televisor2.mostrarInformacion();
 
         Televisor televisor3 = new Televisor(
-            "LG", "OLED C1", 65, true, 1499.99m,
+            "LG", "OLED C1", 65, true, 1499.99f,
             "4K UHD", "OLED", 4, true, "webOS"
         );
-        televisor3.MostrarInformacion();
+        televisor3.mostrarInformacion();
     }
 }
